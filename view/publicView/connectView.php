@@ -39,7 +39,7 @@ include_once '../view/include/header.php';
             </div>
 </form>
 
-<button class="btn" type="button"><a href="?p=sub">Inscrivez vous ici</a></button>
+<button class="btn" type="button"><a href="?p=sub"><p>Inscrivez vous ici</p></a></button>
 </div>
 
 </div>

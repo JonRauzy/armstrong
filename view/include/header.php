@@ -18,17 +18,17 @@ $articleMenu = getCategoryMenu($db);
     <title>C•Ͻ - <?= $title ?></title>
     
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/form-insert-update-sub.css">
-    <link rel="stylesheet" href="css/leStyle.css"  type="text/css" />
+    <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/crud.css"  type="text/css" />
-    <link rel="stylesheet" href="css/styleArt.css"  type="text/css" />
-    <link rel="stylesheet" href="css/navCrud.css" type="text/css">
-
-  
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/general-setting.css"  type="text/css" />
+    <link rel="stylesheet" href="css/home-categ.css"  type="text/css" />
+    <link rel="stylesheet" href="css/insert-update-sub.css" type="text/css">
+    <link rel="stylesheet" href="css/nav-footer.css" type="text/css">
+</head>
+<body>
     <header class="main-head">
-      <img src="asset/img/logo.jpg" alt="" id="logo">
-
+        <img src="asset/img/logo.jpg" alt="" id="logo">
     <nav>
         <?php if(empty($_SESSION)): ?>
             <a class="menu" href="?p=homePage">Accueil</a>
