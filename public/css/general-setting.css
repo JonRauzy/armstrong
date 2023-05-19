@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: 'primetimeregular';
+    src: url('../asset/font/primetime-webfont.woff') format('woff2'),
+        url('../asset/font/primetime-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a, h1, h2, h3 {
+    font-family: 'primetimeregular';
+}
+
+/* tous les boutons les sos */
+.btn{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #ef8d26;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    transition: .3s;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    background-color: #cc7519;
+}
+
+/* tous les inputs */
+.field{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0,0,0,0);
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.field:focus{
+    background-color: #fff;
+    border: 2px solid rgba(30, 85, 250, 0.47);
+}
