@@ -72,9 +72,10 @@ elseif(isset($_GET['p'])){
             $postMax = htmlspecialchars(strip_tags(trim($_POST['max_description_article'])), ENT_QUOTES);
             $postSound = htmlspecialchars(strip_tags(trim($_POST['sound_article'])), ENT_QUOTES);
             $idCateg = (isset($_POST['category_id_category']) && is_array($_POST['category_id_category'])) ? $_POST['category_id_category'] : [];
+            $addImage = $_POST['add_url_image'];
             
             
-            $addArticle = postAdminInsert($db, $_SESSION['id_user'], $postTitle, $postMin, $postMax, $postSound, $idCateg);
+            $addArticle = postAdminInsert($db, $_SESSION['id_user'], $postTitle, $postMin, $postMax, $postSound, $idCateg, $addImage);
             
             if(is_string($addArticle)){
                 

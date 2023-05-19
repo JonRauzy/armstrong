@@ -10,13 +10,13 @@ include_once '../view/include/header.php';
     <form action="" method="post">
         <h2>créer un compte</h2>  
         <?php if(isset($problem)): ?>
-            <h2><?= $problem ?></h2>
+            <h3><?= $problem ?></h3>
         <?php endif; ?>      
         <input class="field" type="text" name="pseudo" id="" placeholder="Entrer votre pseudo">        
         <input class="field" type="password" name="password" id="" placeholder="Entrer votre password">               
         <input class="field" type="password" name="confirmPassword" id="" placeholder="Veuillez confirmer votre password">            
         <input class="field" type="email" name="email" id="" placeholder="Veuillez confirmer votre mail">
-        <input type="submit" value="inscription" name="envoi" class="btn">      
+        <input type="submit" value="Inscription" name="envoi" class="btn">      
     </form>
     <?php 
     if(isset($reponse)): 

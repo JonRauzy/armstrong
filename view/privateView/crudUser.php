@@ -13,7 +13,7 @@ include_once '../view/include/header.php';
     <?php else: ?>
     <table>
         <?php if(isset($problem)): ?>
-            <h2><?= $problem ?></h2>
+            <h3><?= $problem ?></h3>
             <?php endif; ?> 
             <tr>
             <th>nom d'article</th>

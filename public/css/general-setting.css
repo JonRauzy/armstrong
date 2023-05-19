@@ -1,16 +1,17 @@
+
+@font-face {
+    font-family: 'primetimeregular';
+    src: url('../asset/font/primetime-webfont.woff') format('woff2'),
+    url('../asset/font/primetime-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-}
-
-@font-face {
-    font-family: 'primetimeregular';
-    src: url('../asset/font/primetime-webfont.woff') format('woff2'),
-        url('../asset/font/primetime-webfont.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
 }
     
 a {
@@ -18,7 +19,7 @@ a {
     color: white;
 }
 
-a, h1, h2, h3 {
+a, h1, h2 {
     font-family: 'primetimeregular';
 }
 
@@ -33,7 +34,10 @@ a, h1, h2, h3 {
     border: none;
     color: #fff;
     transition: .3s;
-    text-transform: uppercase;
+}
+
+.btn a {
+    font-family: sans-serif;
 }
 
 .btn:hover{

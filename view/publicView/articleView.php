@@ -43,7 +43,7 @@ include_once '../view/include/header.php';
 <div class="conteneurpara">
     <?php
     if(!empty($article['wiki_article'])):?>
-        <p><a href="<?=$article['wiki_article']?>">Cliquez sur ce lien pour plus d'info</a></p> 
+        <p><a href="<?=$article['wiki_article']?>">Cliquez sur ce lien pour accéder à l'article Wikipédia de cet instrument.</a></p> 
 <?php endif;?>
         </div>
     </section>

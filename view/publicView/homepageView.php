@@ -17,7 +17,7 @@ include_once '../view/include/header.php';
       <!--       <i class="fas fa-chevron-circle-left"></i> -->
     </div>
   </div>
-  <h2 class="titre1">MOST RECENT ARTICLES</h2>
+  <h2 class="titre1">LES ARTICLES LES PLUS RECENTS :</h2>
 
   <br>
 

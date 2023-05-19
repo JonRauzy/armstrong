@@ -35,7 +35,7 @@ nav {
 .btn-nav {
     display: flex;
     flex-direction: row;
-    width: 30vw;
+    width: 40vw;
     justify-content: space-between;
     gap: 2rem;
     padding-right: 2rem;
@@ -43,12 +43,16 @@ nav {
 
 .btn-nav a {
     text-decoration: none;
-    color: white;
-    width: 15%;   
+    color: white;   
 }
 
 .btn-nav .btn{
     border-radius: 10px;
+}
+
+.btn-nav button {
+    width: 180px;
+    height: 50px;
 }
 
 @media (max-width: 900px) {

@@ -20,7 +20,7 @@ include_once '../view/include/header.php';
     <h2 style="text-transform: capitalize;">Bonjour <?= $_SESSION['login_user']?> ! </h2>
 
     <?php if(isset($problem)): ?>
-        <h2><?= $problem ?></h2>
+        <h3><?= $problem ?></h3>
         <?php endif; ?>    
         <?php foreach($articleById as $item) :?>
         

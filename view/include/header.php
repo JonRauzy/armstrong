@@ -48,9 +48,9 @@ $articleMenu = getCategoryMenu($db);
             <a class="menu" href="?p=connect">Connexion</a>
             <?php else : ?>
                 <div class="btn-nav">
-                    <button class="btn"><a href="?deconnect">deconnection</a></button>
-                    <button class="btn"><a href="?p=article_add">ajoutez article</a></button>
-                    <button class="btn"><a href="./" style="text-transform: capitalize;"><?= $_SESSION['login_user']?><i class='fas fa-home'></i></a></button>
+                    <button class="btn"><a href="?deconnect">Deconnection</a></button>
+                    <button class="btn"><a href="?p=article_add">Ajoutez article</a></button>
+                    <button class="btn"><a href="./" style="text-transform: capitalize;"><?= $_SESSION['login_user']?> <i class='fas fa-home'></i></a></button>
                 </div>
         <?php endif; ?>
 

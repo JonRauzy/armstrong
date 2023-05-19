@@ -177,7 +177,7 @@ function getArticleByUserId(PDO $db, $userId){
     return $bp;
 } 
 //  Pouvoir insérer un article AVEC ses catégories, AVEC une transaction
-function postAdminInsert(PDO $db, int $idUser, string $postTitle, string $postMin, string $postMax, string $postSound, array $idCateg = []): bool
+function postAdminInsert(PDO $db, int $idUser, string $postTitle, string $postMin, string $postMax, string $postSound, array $idCateg = [], array $imageUrl = []): bool
 {
     // début de transaction, arrête les autocommit, il faut appeler $db->commit() pour que toutes les requêtes soient effectivement validées
     $db->beginTransaction();
@@ -199,7 +199,23 @@ function postAdminInsert(PDO $db, int $idUser, string $postTitle, string $postMi
     $postLastInsertId = $db->lastInsertId();
 
 
+    foreach($imageUrl as $key=>$image){
+        if(!empty($image)){
+            $keys = (int) $key+1;
+            $idString = $postTitle . (int) $keys;
+            $sqlImageInsert = "INSERT INTO `image`(`nom`, `url`, `position`,`credit_image_name`,`credit_image_link`,`article_id_article`) VALUES (:nom, :url, :position, :wikiname, :wikilink, :id)";
+                $prepareImageInsert = $db->prepare($sqlImageInsert);
+                $prepareImageInsert -> bindValue(":nom", $idString, PDO::PARAM_STR);
+                $prepareImageInsert -> bindValue(":url", $image, PDO::PARAM_STR);
+                $prepareImageInsert -> bindValue(":position", $keys, PDO::PARAM_INT);
+                $prepareImageInsert -> bindValue(":wikiname", "wiki",PDO::PARAM_STR);
+                $prepareImageInsert -> bindValue(":wikilink", "wikiki",PDO::PARAM_STR);
+                $prepareImageInsert -> bindValue(":id",$postLastInsertId, PDO::PARAM_STR);
+                $prepareImageInsert -> execute();
+        }
+    }
     // pour insérer les catégories dans la table M2M, on ne garde que les valeurs qui doivent être des integer dans des champs category_has_post
+
 
     // si le tableau n'est pas vide (catégories potentielles)
     if (!empty($idCateg)) {

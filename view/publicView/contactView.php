@@ -18,7 +18,7 @@ include_once '../view/include/header.php';
         <div class="right">
             <h2 class="contactezns">Contactez-nous</h2>
             <?php if(isset($problem)): ?>
-                <h2><?= $problem ?></h2>
+                <h3><?= $problem ?></h3>
             <?php endif; ?> 
 
 
@@ -28,7 +28,7 @@ include_once '../view/include/header.php';
             
             <textarea name="contactMessage" id="message" class="field area" placeholder= "message" required /></textarea>   
             
-            <input type="submit" value="ENVOYER" class="btn" id="submit">
+            <input type="submit" value="Envoyer" class="btn" id="submit">
                 
         </div>
     </div>
