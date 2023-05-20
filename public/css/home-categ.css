@@ -69,6 +69,7 @@ audio {
     width: 280px;
     height: 200px;
     padding-left: 0;
+    object-fit: cover;
 }
 
 h2.positionCard {
@@ -90,13 +91,24 @@ audio {
 }
 
 .gridCard{
-    /*display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;*/
     display: grid;
     grid-template-columns: repeat(4,1fr);
     justify-items: center;
-    align-content: center;
+}
+@media (max-width: 1300px) {
+    .gridCard{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1000px) {
+    .gridCard{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .gridCard{
+        grid-template-columns: 1fr;
+    }
 }
 
 p.positionCard {
@@ -126,14 +138,11 @@ img.ctrlIcon {
     background-color: white;
 }
 
-
-
 p.gategDesc {
     margin-left: 30px;
 }
 
 h2.gategName{
-    font-family: 'primetimeregular';
     margin-left: 30px;
     margin-top: 50px;
 }

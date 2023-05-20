@@ -100,6 +100,7 @@ function getArticleById($db, $id){
     $prepare->closeCursor();
     return $result;
 }
+
 //  et recupere les images avec l'ic correspondant
 function getImageByarticleId($db, $id){
     $sql = "SELECT * FROM `image` WHERE article_id_article = :id;";
@@ -176,8 +177,9 @@ function getArticleByUserId(PDO $db, $userId){
     $query->closeCursor();
     return $bp;
 } 
+
 //  Pouvoir insérer un article AVEC ses catégories, AVEC une transaction
-function postAdminInsert(PDO $db, int $idUser, string $postTitle, string $postMin, string $postMax, string $postSound, array $idCateg = [], array $imageUrl = []): bool
+function postAdminInsert(PDO $db, int $idUser, string $postTitle, string $postMin, string $postMax, string $postSound, array $idCateg = [], array $imageUrl = [], array $imageWikiUrl = [], array $imageWikiName = []): bool
 {
     // début de transaction, arrête les autocommit, il faut appeler $db->commit() pour que toutes les requêtes soient effectivement validées
     $db->beginTransaction();
@@ -208,8 +210,8 @@ function postAdminInsert(PDO $db, int $idUser, string $postTitle, string $postMi
                 $prepareImageInsert -> bindValue(":nom", $idString, PDO::PARAM_STR);
                 $prepareImageInsert -> bindValue(":url", $image, PDO::PARAM_STR);
                 $prepareImageInsert -> bindValue(":position", $keys, PDO::PARAM_INT);
-                $prepareImageInsert -> bindValue(":wikiname", "wiki",PDO::PARAM_STR);
-                $prepareImageInsert -> bindValue(":wikilink", "wikiki",PDO::PARAM_STR);
+                $prepareImageInsert -> bindValue(":wikiname", $imageWikiName[$key],PDO::PARAM_STR);
+                $prepareImageInsert -> bindValue(":wikilink", $imageWikiUrl[$key],PDO::PARAM_STR);
                 $prepareImageInsert -> bindValue(":id",$postLastInsertId, PDO::PARAM_STR);
                 $prepareImageInsert -> execute();
         }

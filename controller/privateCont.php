@@ -73,9 +73,11 @@ elseif(isset($_GET['p'])){
             $postSound = htmlspecialchars(strip_tags(trim($_POST['sound_article'])), ENT_QUOTES);
             $idCateg = (isset($_POST['category_id_category']) && is_array($_POST['category_id_category'])) ? $_POST['category_id_category'] : [];
             $addImage = $_POST['add_url_image'];
+            $addImageWikiUrl = $_POST['add_image_wiki_url'];
+            $addImageWikiName = $_POST['add_image_wiki_name'];
             
             
-            $addArticle = postAdminInsert($db, $_SESSION['id_user'], $postTitle, $postMin, $postMax, $postSound, $idCateg, $addImage);
+            $addArticle = postAdminInsert($db, $_SESSION['id_user'], $postTitle, $postMin, $postMax, $postSound, $idCateg, $addImage, $addImageWikiUrl, $addImageWikiName);
             
             if(is_string($addArticle)){
                 
