@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
     height: 10vh;
 }
 
@@ -16,7 +15,6 @@ a.menu{
 }
 
 a.menu:hover{
-    /* font-weight: 1000; */
     text-decoration: underline 2px;
 }
 
@@ -29,7 +27,6 @@ nav {
     flex-direction: row;
     gap: 2rem;
     padding-right: 2rem;
-    /* background-color: green;  */
 }
 
 .btn-nav {

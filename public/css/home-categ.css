@@ -1,5 +1,5 @@
 .slider {
-    height: 80vh;
+    height: 60vh;
     position: relative;
 }
 @media (max-width: 900px) {
@@ -19,6 +19,17 @@
     opacity: 0;
     transition: opacity .5s;
 }
+@media (max-width: 1200px) {
+    .slider {
+        height: 40vh;
+    }
+}
+@media (max-width: 900px) {
+    .slider {
+        height: 20vh;
+    }
+}
+
 
 .slider img.active {
     opacity: 1;
