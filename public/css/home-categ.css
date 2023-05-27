@@ -2,6 +2,12 @@
     height: 80vh;
     position: relative;
 }
+@media (max-width: 900px) {
+    .slider{
+        height: 20vh;
+    }
+    
+}
 
 .slider img {
     object-fit: cover;
@@ -61,7 +67,6 @@ audio {
 .titre1 {
     margin-top: 20px;
     text-align: center;
-    font-family: 'primetimeregular';
 
 }
 
@@ -79,7 +84,6 @@ h2.positionCard {
     text-align: center;
     position: relative;
     top: -30px;
-    font-family: 'primetimeregular';
 
 }
 
