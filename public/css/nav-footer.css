@@ -22,11 +22,79 @@ a.menu:hover{
     margin-bottom: 1rem;
 }
 
-nav {
+.desktop-nav {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     padding-right: 2rem;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width:1200px) {
+    .mobile-nav {
+        display: inline;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .mobile-nav a {
+        color: white;       
+    }
+
+    .bouton{
+        background-color: yellow;
+        display: block;
+        height: 50px;
+        width: 50px;
+    }
+    .bouton-open{
+        background-color: red;
+        z-index: 1;
+        position: relative;
+        right: 1rem;
+    }
+    .bouton-close{
+        background-color: green;
+        position: relative;
+        margin-bottom: -50px;
+        top: -20px;
+        right: 0;
+    } 
+    
+    .close-navbar.open{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1000;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 1s;
+    }
+    .close-navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1000;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        transition: 1s;
+
+    }
+    
 }
 
 .btn-nav {
@@ -35,7 +103,7 @@ nav {
     width: 40vw;
     justify-content: space-between;
     gap: 2rem;
-    padding-right: 2rem;
+    /* padding-right: 2rem; */
 }
 
 .btn-nav a {
@@ -54,9 +122,9 @@ nav {
 
 @media (max-width: 900px) {
     .btn-nav{
-        margin-left: -40%;
         flex-direction: column;
-        width: 50vw;
+        margin: 0;
+        padding-right: -2rem;
     } 
 }
 

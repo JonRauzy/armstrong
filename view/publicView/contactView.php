@@ -13,7 +13,7 @@ include_once '../view/include/header.php';
 
     <div class="contact-box">
         <div class="left">
-        <img src="asset/img/img2.jpg" class="bg" alt="image cuivre music">
+            <img src="asset/img/img2.jpg" class="bg" alt="image cuivre music">
         </div>
         <div class="right">
             <h2 class="contactezns">Contactez-nous</h2>

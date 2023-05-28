@@ -12,12 +12,10 @@ $articleMenu = getCategoryMenu($db);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/leStyle.css" rel="stylesheet" type="text/css" />
 
     <!-- On mettra le title dans une variable $title a renseigner en haut de chaque vue ex: $title = accueil  -->
     <title>C•Ͻ - <?= $title ?></title>
     
-
     <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/crud.css"  type="text/css" />
     <link rel="stylesheet" href="css/form.css">
@@ -30,29 +28,60 @@ $articleMenu = getCategoryMenu($db);
     <header class="main-head">
         <img src="asset/img/logo.jpg" alt="" id="logo">
     <nav>
-        <?php if(empty($_SESSION)): ?>
-            <a class="menu" href="?p=homePage">Accueil</a>
-            
-            <!-- lien pour les category : -->
-            <?php
-            foreach($articleMenu as $item) : 
-            ?>
-    
-            <a class="menu" href="?categoryId=<?=$item['id_category']?>"><?=$item['name_category']?></a>
-    
-            <?php
+        <div class="desktop-nav">
+            <?php if(empty($_SESSION)): ?>
+                <a class="menu" href="?p=homePage">Accueil</a>
                 
-            endforeach;
-            ?>
-            <a class="menu" href="?p=contact">Contact</a>
-            <a class="menu" href="?p=connect">Connexion</a>
-            <?php else : ?>
-                <div class="btn-nav">
-                    <button class="btn"><a href="?deconnect">Deconnection</a></button>
-                    <button class="btn"><a href="?p=article_add">Ajoutez article</a></button>
-                    <button class="btn"><a href="./" style="text-transform: capitalize;"><?= $_SESSION['login_user']?> <i class='fas fa-home'></i></a></button>
-                </div>
-        <?php endif; ?>
+                <!-- lien pour les category : -->
+                <?php
+                foreach($articleMenu as $item) : 
+                ?>
+        
+                <a class="menu" href="?categoryId=<?=$item['id_category']?>"><?=$item['name_category']?></a>
+        
+                <?php
+                    
+                endforeach;
+                ?>
+                <a class="menu" href="?p=contact">Contact</a>
+                <a class="menu" href="?p=connect">Connexion</a>
+                <?php else : ?>
+                    <div class="btn-nav">
+                        <button class="btn"><a href="?deconnect">Deconnection</a></button>
+                        <button class="btn"><a href="?p=article_add">Ajoutez article</a></button>
+                        <button class="btn"><a href="./" style="text-transform: capitalize;"><?= $_SESSION['login_user']?> <i class='fas fa-home'></i></a></button>
+                    </div>
+            <?php endif; ?>
+        </div>
+        <div class="mobile-nav">
+            <div class="bouton bouton-open" onclick="navbarbar()"></div>
+            <div class="close-navbar">
+                <div class="bouton bouton-close" onclick="navbarbar()"></div>
+                <?php if(empty($_SESSION)): ?>
+                    <a class="menu" href="?p=homePage">Accueil</a>
+                    
+                    <!-- lien pour les category : -->
+                    <?php
+                    foreach($articleMenu as $item) : 
+                    ?>
+            
+                    <a class="menu" href="?categoryId=<?=$item['id_category']?>"><?=$item['name_category']?></a>
+            
+                    <?php
+                        
+                    endforeach;
+                    ?>
+                    <a class="menu" href="?p=contact">Contact</a>
+                    <a class="menu" href="?p=connect">Connexion</a>
+                    <?php else : ?>
+                        <div class="btn-nav">
+                            <button class="btn"><a href="?deconnect">Deconnection</a></button>
+                            <button class="btn"><a href="?p=article_add">Ajoutez article</a></button>
+                            <button class="btn"><a href="./" style="text-transform: capitalize;"><?= $_SESSION['login_user']?> <i class='fas fa-home'></i></a></button>
+                        </div>
+                <?php endif; ?>
+            </div>
+        </div>
 
     </nav>
 

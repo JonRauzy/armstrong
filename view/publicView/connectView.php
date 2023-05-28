@@ -3,19 +3,8 @@
 $title = "Connect";
 include_once '../view/include/header.php';
 
-
 ?>
-<!--<form action="" method="POST">
-  <label for="login">Nom d'utilisateur :</label>
-  <input type="text" id="login" name="login"><br>
 
-  <label for="pwd">Mot de passe :</label>
-  <input type="password" id="pwd" name="pwd"><br>
-
-
-  <input type="submit" name="connect">
-</form>
-<button type="button"><a href="?p=sub">Inscrivez vous ici</a></button>-->
 <form action="" method="POST" class="formcontact">
 
     <div class="container">

@@ -40,3 +40,14 @@ setInterval(function() {
   enleverActiveImages();
   img__slider[etape].classList.add('active');
 }, 3000);
+
+// navbar 
+function navbarbar() {
+  let close = document.querySelector('.close-navbar')
+  document.querySelector('.bouton');
+  if (close.className === "close-navbar") {
+    close.className += " open";
+  } else {
+    close.className = "close-navbar";
+  }
+}
