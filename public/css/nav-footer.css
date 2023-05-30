@@ -76,7 +76,7 @@ a.menu:hover{
         width: 100vw;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         transition: 1s;
     }
     .close-navbar {
@@ -90,7 +90,7 @@ a.menu:hover{
         background-color: black;
         position: absolute;
         top: -100%;
-        left: 0;
+        right: -100%;
         transition: 1s;
 
     }
