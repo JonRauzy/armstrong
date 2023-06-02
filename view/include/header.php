@@ -54,9 +54,9 @@ $articleMenu = getCategoryMenu($db);
             <?php endif; ?>
         </div>
         <div class="mobile-nav">
-            <div class="bouton bouton-open" onclick="navbarbar()"></div>
+            <div class="bouton bouton-open" onclick="navbarbar()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" alt=""></div>
             <div class="close-navbar">
-                <div class="bouton bouton-close" onclick="navbarbar()"></div>
+                <div class="bouton bouton-close" onclick="navbarbar()"><i class="fa-solid fa-x fa-2xl" style="color: #ffffff;"></i></div>
                 <?php if(empty($_SESSION)): ?>
                     <a class="menu" href="?p=homePage">Accueil</a>
                     

@@ -47,24 +47,22 @@ a.menu:hover{
     }
 
     .bouton{
-        background-color: yellow;
         display: block;
         height: 50px;
         width: 50px;
     }
-    .bouton-open{
-        background-color: red;
+    .bouton-open img{
+        width: 100%;
         z-index: 1;
         position: relative;
         right: 1rem;
     }
-    .bouton-close{
-        background-color: green;
+    .bouton-close {
+        align-items: center;
         position: relative;
-        margin-bottom: -50px;
-        top: -20px;
-        right: 0;
-    } 
+        right: -0.6rem;
+        top: 2rem
+    }
     
     .close-navbar.open{
         display: flex;
@@ -77,7 +75,7 @@ a.menu:hover{
         position: absolute;
         top: 0;
         right: 0;
-        transition: 1s;
+        transition: 0.5s;
     }
     .close-navbar {
         display: flex;
@@ -91,7 +89,9 @@ a.menu:hover{
         position: absolute;
         top: -100%;
         right: -100%;
-        transition: 1s;
+        /* top: 0; */
+        /* right: 0; */
+        transition: 0.5s;
 
     }
     
