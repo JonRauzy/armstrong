@@ -1,12 +1,10 @@
 .contitreart{
-    height: 250px;
+    height: 25vh;
     display: flex;
-    font-size: 3.5em;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
     background: no-repeat center  url(../asset/img/BannierArticle.jpg);
-}
-
-.titreart {
-    margin: auto;
 }
 
 .conteneurart {
@@ -14,25 +12,14 @@
     flex-direction: column;
 }
 
-.contimgart1 {
-    display: flex;
-    width: 80vw;
-    padding-top: 100px;
-    margin: auto;
-}
-
-.imgart1 {
-    width: 100%;
-    margin: auto;
-}
-
 .conteneurpara {
     width: 75%;
     font-size: 2em;
-    margin: 100px auto;
+    margin: auto;
     border: 5px solid black;
     border-radius: 8px;
-    padding: 35px;
+    margin: 2rem auto;
+    padding: 1rem;
 }
 
 .conteneurpara a {
@@ -46,12 +33,16 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 100px;
+    padding-top: 2rem;
+}
+
+.contimgart img{
+    width: 100%;
+    max-width: 700px;
 }
 
 .imgart {
-    width: 550px;
+    width: 100%;
 }
 
 @media screen and (max-width:1938px){
@@ -65,4 +56,27 @@
         width: 550px;
         margin: auto;
     }
-  }
+}
+
+@media screen and (max-width:938px){
+    .contitreart{
+        font-size: 2rem;
+    }
+    .conteneurpara {
+        width: 95%;
+        font-size: 1.5em;
+        margin: 2rem auto;
+        border: 5px solid black;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    .imgart{
+        width: 100%;
+    }
+
+    .contimgart{
+        width: 100%;
+    }
+}
+
