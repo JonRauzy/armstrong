@@ -20,15 +20,15 @@ $paragraphe = breakText($textArticle, strlen($textArticle)/2);
             <p><?= $paragraphe['0']?></p>           
             <!-- par contre si on pas d'autres photos doit vérifier si elle existe avant d'essayer de l'afficher sinon ça fait une erreur -->
             <?php if(!empty($imageByArticleID[1]['url'])):?>
-            <img src="<?= $imageByArticleID[1]['url'] ?> " alt="">
+            <img class="right" src="<?= $imageByArticleID[1]['url'] ?> " alt="">
             <?php endif; ?>
         </div>
 
         <div class="para-art">
-            <p><?= $paragraphe['1']?></p>
             <?php if(!empty($imageByArticleID[2]['url'])):?>
-            <img src="<?= $imageByArticleID[2]['url'] ?> " alt="">
+            <img class="left" src="<?= $imageByArticleID[2]['url'] ?> " alt="">
             <?php endif; ?>
+            <p><?= $paragraphe['1']?></p>
         </div>
 
         <?php
