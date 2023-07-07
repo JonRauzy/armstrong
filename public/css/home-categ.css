@@ -9,6 +9,19 @@
     
 }
 
+.header-categ{
+    width: 70%;
+    margin: auto;
+    font-size: 1.5rem;
+    margin: 1.5rem auto;
+    text-align: justify;
+}
+@media (max-width:966px) {
+    .header-categ{
+        width: 90%;
+    }
+}
+
 .slider img {
     object-fit: cover;
     height: 100%;
@@ -152,13 +165,3 @@ img.ctrlIcon {
     border-radius: 30px;
     background-color: white;
 }
-
-p.gategDesc {
-    margin-left: 30px;
-}
-
-h2.gategName{
-    margin-left: 30px;
-    margin-top: 50px;
-}
-

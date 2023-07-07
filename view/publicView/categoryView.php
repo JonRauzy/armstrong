@@ -9,23 +9,26 @@ include_once '../view/include/header.php';
 
 
 <!-- affichage titre la catégory et la descritpion -->
-    <h2 class="gategName"><?= $categoryById['name_category'];?></h2>
-    <p class="gategDesc"><?= $categoryById['description_category'];?></p>
-
+<div class="titre-art">
+    <h2><?= $categoryById['name_category'];?></h2>
+</div>
+<div class="header-categ">
+    <p><?= $categoryById['description_category'];?></p>
+</div>
 
 <!-- affichage des articles de la catégory -->
 <div class="gridCard">
-<?php foreach($articlesByCategory as $item) : ?>
-    <div class='card1'>
-    <a href="?articleId=<?=$item['id_article']?>"><img src="<?=$item['url']?>" alt="<?= $item['name_article']?>" width="300px"></a>
-    <h2 class="positionCard"><?= $item['name_article']?></h2>
-    <img src="asset/img/bouton-jouer.png" class="ctrlIcon" />
-    <p class="positionCard"><?=$item['min_description_article']?></p>
-    <div>
-    <audio controls src="<?= $item['sound_article'] ?>"></audio>
-  </div>
-</div>
-<?php endforeach; ?>
+    <?php foreach($articlesByCategory as $item) : ?>
+        <div class='card1'>
+            <a href="?articleId=<?=$item['id_article']?>"><img src="<?=$item['url']?>" alt="<?= $item['name_article']?>" width="300px"></a>
+            <h2 class="positionCard"><?= $item['name_article']?></h2>
+            <img src="asset/img/bouton-jouer.png" class="ctrlIcon" />
+            <p class="positionCard"><?=$item['min_description_article']?></p>
+        <div>
+            <audio controls src="<?= $item['sound_article'] ?>"></audio>
+        </div>
+    </div>
+    <?php endforeach; ?>
 </div>
 
 
