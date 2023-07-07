@@ -45,15 +45,14 @@
     /* background-color: yellow; */
 }
 
-
-.para-art  img:nth-child() {
-    float: left;
-    background: red;
-}
-.para-art img:nth-child(){
+.body-article  img{
     float: right;
-    background-color: green;
 }
+
+.para-art img:nth-last-of-type(even){
+    float: left;
+}
+
 
 .para-art p {
     padding: 1.5rem;

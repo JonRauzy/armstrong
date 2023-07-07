@@ -19,22 +19,24 @@ $paragraphe = breakText($textArticle, strlen($textArticle)/3);
             <img src="<?= $imageByArticleID[0]['url'] ?> " alt=""> 
         </div>
 
-        <div class="para-art">
-            <img class="para-img" src="<?= $imageByArticleID[1]['url'] ?> " alt="">
-            <p><?= $paragraphe['0']?></p>           
-            <!-- par contre si on pas d'autres photos doit vérifier si elle existe avant d'essayer de l'afficher sinon ça fait une erreur -->
-            <?php if(!empty($imageByArticleID[1]['url'])):?>
-            <?php endif; ?>
-        </div>
+        <div class="body-article">
+            <div class="para-art">
+                <img src="<?= $imageByArticleID[1]['url'] ?> " alt="">
+                <p><?= $paragraphe['0']?></p>           
+                <!-- par contre si on pas d'autres photos doit vérifier si elle existe avant d'essayer de l'afficher sinon ça fait une erreur -->
+                <?php if(!empty($imageByArticleID[1]['url'])):?>
+                <?php endif; ?>
+            </div>
 
-        <div class="para-art">
-            <img class="para-img" src="<?= $imageByArticleID[2]['url'] ?> " alt="">
-            <p><?= $paragraphe['1']?></p>
-            <?php if(!empty($imageByArticleID[2]['url'])):?>
-            <?php endif; ?>
-        </div>
-        <div class="para-art">
-            <p><?=$paragraphe['2']?></p>
+            <div class="para-art">
+                <img src="<?= $imageByArticleID[2]['url'] ?> " alt="">
+                <p><?= $paragraphe['1']?></p>
+                <?php if(!empty($imageByArticleID[2]['url'])):?>
+                <?php endif; ?>
+            </div>
+            <div class="para-art">
+                <p><?=$paragraphe['2']?></p>
+            </div>
         </div>
 
         <div class="wiki">
