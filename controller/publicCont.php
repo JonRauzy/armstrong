@@ -46,22 +46,22 @@ if(isset($_GET['p'])){
             $allArticle = getAllArticle($db);
             include_once '../view/publicView/homepageView.php';
             break;
-            case 'contact':
+        case 'contact':
             include_once '../view/publicView/contactView.php';
             break;
         case 'connect':
             include_once '../view/publicView/connectView.php';
             break;  
-            case 'sub':
-                include_once '../view/publicView/inscriptionView.php';
-                break;
-                default: 
-                $allArticle = getAllArticle($db);
-                include_once '../view/publicView/homepageView.php';
-                break;
-            }      
-            
-        }
+        case 'sub':
+            include_once '../view/publicView/inscriptionView.php';
+            break;
+        default: 
+            $allArticle = getAllArticle($db);
+            include_once '../view/publicView/homepageView.php';
+        break;
+        }      
+        
+    }
         
         // affiche les categories par id et les articles par catégorie
         elseif(isset($_GET['categoryId'])&&ctype_digit($_GET['categoryId'])){   
