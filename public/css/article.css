@@ -38,17 +38,15 @@
     width: 80%;
     margin: auto;
     height: fit-content;
+    padding: 1rem;
+    
 }
 
 .para-art img{
-    max-height: 400px;
+    max-height: 300px;
     width: auto;
-    float: right;
+    max-width: 95%;
     margin: 0.5rem;
-}
-
-.para-art:nth-last-of-type(even) img{
-    float: left;
 }
 
 .para-art p {
@@ -57,6 +55,10 @@
     margin-bottom: 2rem;
 }
 
+.body-article{
+    height: fit-content;
+    padding-bottom: 2rem;
+}
 
 .wiki {
     /* background-color: green; */
